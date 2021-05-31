@@ -1,0 +1,28 @@
+.app-wrapper {
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  text-align: left;
+  grid-template-areas: 
+  "header header"
+  "data reps";
+  grid-template-rows: 72px 288px;
+  grid-template-columns: 1fr 10fr;
+  font-family: Inter;
+}
+
+p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 62px;
+  width: 210px;
+  left: 578px;
+  top: 403px;
+  border-radius: nullpx;
+  color: #808080;
+  font-family: Inter;
+}

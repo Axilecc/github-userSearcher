@@ -1,0 +1,35 @@
+.info {
+    margin: 269px 578px;
+    width: 210px;
+    left: 578px;
+    top: 269px;
+    border-radius: 0px;
+    height: 196px
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 64.16667938232422px;
+    width: 64.16752624511719px;
+    left: 22.916748046875px;
+    top: 22.916748046875px;
+    border-radius: 0px;
+}
+
+/* p {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: center;
+    height: 62px;
+    width: 210px;
+    left: 578px;
+    top: 403px;
+    border-radius: nullpx;
+    color: #808080;
+    font-family: Inter;
+} */

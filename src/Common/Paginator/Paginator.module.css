@@ -1,0 +1,11 @@
+.selectedPage {
+    background-color:  blue;
+    color: white;
+    
+}
+.pagesNav {
+    margin: 5px;
+    cursor: pointer;
+    margin-right: 3px;
+    display: inline-block;
+}

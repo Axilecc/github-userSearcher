@@ -1,0 +1,17 @@
+.info {
+    margin: 242px 378px;
+    width: 210px;
+}
+
+.info .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px;
+    width: 80px;
+}
+
+.info .empty {
+    text-align: center;
+    color: #808080;
+}

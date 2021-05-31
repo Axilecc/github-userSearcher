@@ -1,0 +1,24 @@
+.header {
+    grid-area: header;
+    display: block;
+    background-color: blue;
+}
+
+.header div {
+    float: left;
+}
+
+.header .headerLogo {
+    margin: 16px 16px 0 41px;
+}
+
+input {
+    border: none;
+    margin-top: 16px;
+    height: 40px;
+    width: 470px;
+    border-radius: 6px;
+    background: url(../../Images/smallSearch.png) no-repeat 15px 15px;
+    padding-left: 40px;
+    background-color: #fff;
+}

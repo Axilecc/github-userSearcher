@@ -1,0 +1,26 @@
+.info {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    margin-right: 125px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.info .fullname {
+    text-align: left;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.info .description {
+    text-align: left;
+    font-size: 16px;
+    margin-left: 10px;
+}
