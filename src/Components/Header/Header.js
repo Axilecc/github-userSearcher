@@ -8,24 +8,24 @@ export const Header = () => {
     let [value, setValue] = useState('');
     
     const searchUser = async (event) => {
-        if(event.key === 'Enter') {
-            history.push(`/user/${value}`);
+        if (event.key === 'Enter') {
+            history.push(`/user/${ value }`);
         }
     }
 
     return (
-        <header className={s.header}>
+        <div className={ s.header }>
             <div>
-                <Link to='/'> <img className={s.headerLogo} src={logo} alt='logo'/> </Link>
+                <Link to='/'> <img className={ s.headerLogo } src={ logo } alt='logo'/> </Link>
             </div>
-            <div>
+            <div className={ s.input }>
                 <input id='user' 
                 type='text' 
                 placeholder='search user' 
                 onChange={e => setValue(e.target.value)} 
-                onKeyPress={searchUser} 
-                value={value} />
+                onKeyPress={ searchUser } 
+                value={ value } />
             </div>
-        </header>
+        </div>
     )
 }

@@ -4,28 +4,29 @@ import { Repository } from './Repository/Repository';
 import { NoRepPage } from '../../NoRepPage/NoRepPage';
 import s from './RepositoriesPage.module.css';
 
-export const RepositoriesPage = ({ repos, repCount, currentPage, amountPerPage, onPageChanged}) => {
+export const RepositoriesPage = ({ repos, repCount, currentPage, 
+                                   amountPerPage, onPageChanged }) => {
     
-    if(repos.length === 0) {
+    if (repos.length === 0) {
         return <NoRepPage />
     }
 
     return (
-        <div className={s.container}>        
+        <div>        
             <div>
-                <p className={s.repositories}>Repositories ({repCount})</p>
+                <p className={ s.repositories }> Repositories ({ repCount }) </p>
             </div>
             <div>
-                {repos.map(r => <Repository 
-                fullname={r.name} 
-                description={r.description} 
-                url={r.clone_url}
-                key={r.id} />)}
+                { repos.map( repository => <Repository 
+                fullname={ repository.name } 
+                description={ repository.description } 
+                url={ repository.clone_url }
+                key={ repository.id } />) }
             </div>
-            <Paginator totalItemsCount={repCount} 
-            currentPage={currentPage} 
-            onPageChanged={onPageChanged} 
-            amountPerPage={amountPerPage}/>
+            <Paginator totalItemsCount={ repCount } 
+            currentPage={ currentPage } 
+            onPageChanged={ onPageChanged } 
+            amountPerPage={ amountPerPage }/>
         </div>
     )
 }

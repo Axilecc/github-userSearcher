@@ -14,22 +14,31 @@ export const UserPage = () => {
     const [repos, setRepos] = useState('');
     const userId = useParams().userId;
     const amountPerPage = 4;
-
+    const baseurl = 'https://api.github.com/users/'; 
 
     useEffect(() => {
         const getUserData = async() => {
-            const data = await request(`https://api.github.com/users/${userId}`);
-            if(!data) {
-                return <Redirect to={'/notfound'} />
+
+            const data = await request(`${ baseurl }${ userId }`);
+
+            if (!data) {
+                return <Redirect to={ '/notfound' } />
             }
+
             setUserData(data);
         }
         getUserData();
+
         const getRepos = async() => {
-            const data = await request(`https://api.github.com/users/${userId}/repos?page=${currentPage}&per_page=${amountPerPage}`);
+
+            const data = await request(
+                `${ baseurl }${ userId }/repos?page=${ currentPage }&per_page=${ amountPerPage }`
+            );
+
             setRepos(data);
         }
         getRepos();
+
     }, [amountPerPage, currentPage, userId, request])
 
     if (loading) {
@@ -37,23 +46,23 @@ export const UserPage = () => {
     }
 
     return (
-       <div className={s.container}>
-            <div className={s.userData}>
-                {!loading && userData && <UserData 
-                followers={userData.followers}
-                userLink={userData.html_url}
-                following={userData.following}
-                name={userData.name}
-                login={userData.login}
-                url={userData.avatar_url}/>}
+       <div className={ s.container }>
+            <div className={ s.userData }>
+                { !loading && userData && <UserData 
+                followers={ userData.followers }
+                userLink={ userData.html_url }
+                following={ userData.following }
+                name={ userData.name }
+                login={ userData.login }
+                url={ userData.avatar_url }/> }
             </div>
-            <div className={s.repos}>
-                {!loading && repos && <RepositoriesPage 
-                amountPerPage={amountPerPage}
-                currentPage={currentPage} 
-                onPageChanged={onPageChanged}
-                repCount={userData.public_repos} 
-                repos={repos}/> }
+            <div className={ s.repos }>
+                { !loading && repos && <RepositoriesPage 
+                amountPerPage={ amountPerPage }
+                currentPage={ currentPage } 
+                onPageChanged={ onPageChanged }
+                repCount={ userData.public_repos } 
+                repos={ repos }/> }
             </div>
        </div>
     )

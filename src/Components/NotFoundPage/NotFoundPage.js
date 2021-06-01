@@ -4,13 +4,9 @@ import s from './NotFoundPage.module.css';
 
 export const NotFoundPage = () => {
     return (
-        <div className={s.info}>
-            <div className={s.image}>
-                <img className={s.image} src={searchImage} alt='search_image'></img>
-            </div>
-            <div>
-                <p>User not found</p>
-            </div>
+        <div className={ s.info }>
+            <img className={ s.image } src={ searchImage } alt='search_image'/>
+            <p className={ s.notFound }>User not found</p>
         </div>
     )
 }

@@ -3,6 +3,6 @@ import s from './Preloader.module.css';
 
 export const Preloader = () => { 
     return (
-        <div className={s.loader}></div>
+        <div className={s.loader} />
     ) 
 }

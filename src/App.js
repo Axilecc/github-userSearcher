@@ -4,7 +4,7 @@ import { Header } from './Components/Header/Header';
 import { InitialPage } from "./Components/InitialPage/InitialPage";
 import { NotFoundPage } from "./Components/NotFoundPage/NotFoundPage";
 import { UserPage } from "./Components/UserPage/UserPage";
-import {Switch, Route, Redirect} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
 
           <Route exact path='/user/:userId?' render={ () => <UserPage /> } />  
 
-          <Route path='*' exact render={ () => <Redirect to={'/'} /> } />
+          <Route path='*' exact render={ () => <Redirect to={ '/' } /> } />
         </Switch>
       </div>
     </div>
