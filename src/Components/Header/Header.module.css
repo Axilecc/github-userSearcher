@@ -18,7 +18,7 @@ input {
     height: 40px;
     width: 470px;
     border-radius: 6px;
-    background: url(../../Images/smallSearch.png) no-repeat 15px 15px;
+    background: url(@assets/images/smallSearch.png) no-repeat 15px 15px;
     padding-left: 40px;
     background-color: #fff;
 }

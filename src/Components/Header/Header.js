@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import s from "./Header.module.css"
-import logo from '../../Images/Vector.png';
+import React, { useState } from 'react';
+import s from './Header.module.css';
+import logo  from '@assets/images/Vector.png';
 import { Link, useHistory } from 'react-router-dom';
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
     
     const searchUser = async (event) => {
         if(event.key === 'Enter') {
-            history.push(`/user/${value}`)
+            history.push(`/user/${value}`);
         }
     }
 

@@ -1,15 +1,16 @@
 import React from 'react';
-import searchImage from '../../Images/search.png'
-import s from './InitialPage.module.css'
-export const InitialPage = () => {
+import searchImage from '@assets/images/user.png';
+import s from './NotFoundPage.module.css';
+
+export const NotFoundPage = () => {
     return (
         <div className={s.info}>
             <div className={s.image}>
                 <img className={s.image} src={searchImage} alt='search_image'></img>
             </div>
             <div>
-                <p>Start with searching a GitHub user</p>
+                <p>User not found</p>
             </div>
-        </div> 
+        </div>
     )
 }

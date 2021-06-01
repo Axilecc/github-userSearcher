@@ -1,27 +1,27 @@
 import { useCallback, useState } from "react";
 
 export const useHttp = () => {
-    let [currentPage, setCurrentPage] = useState(1)
+    let [currentPage, setCurrentPage] = useState(1);
 
     const onPageChanged = (props) => {
-        setCurrentPage(props)
+        setCurrentPage(props);
     }
     
     let [loading, setLoading] = useState(false);
 
     const request = useCallback(async (url, method='GET') => {
-        setLoading(true)
+        setLoading(true);
         try {
-            const response = await fetch(url, {method})
-            const data = await response.json()
+            const response = await fetch(url, {method});
+            const data = await response.json();
             if(!response.ok) {
-                throw new Error(data.message || 'Что-то пошло не так')
+                throw new Error(data.message || 'Что-то пошло не так');
             }
-        setLoading(false)
-            return data
+        setLoading(false);
+            return data;
         } catch (e) {
-        setLoading(false)
-        throw e
+        setLoading(false);
+        throw e;
         }
     }, [])
     

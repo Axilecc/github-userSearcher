@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './Paginator.module.css';
 
-export const Paginator = ({id, totalItemsCount, currentPage, amountPerPage, onPageChanged}) => {
+export const Paginator = ({totalItemsCount, currentPage, amountPerPage, onPageChanged}) => {
     let pageSize = 5;
     let pagesCount = Math.ceil(totalItemsCount / amountPerPage);
     let pages = [];    
@@ -25,7 +25,7 @@ export const Paginator = ({id, totalItemsCount, currentPage, amountPerPage, onPa
         <button onClick={() => setportionNumber(portionNumber - 1)}>Prev</button>}
 
         {pages.filter(p => p >=leftBorderPageNumber && p <=rightBorderPageNumber).map((p) => {
-            return <div className={s.pagesNav}>
+            return <div key={p} className={s.pagesNav}>
                 <span className={currentPage === p && s.selectedPage}
                 onClick={() => {onPageChanged(p)}}>{p}</span>
             </div>
