@@ -5,8 +5,10 @@ import s from './InitialPage.module.css';
 export const InitialPage = () => {
     return (
         <div className={ s.info }>
-            <img className={ s.image } src={ searchImage } alt='search_image'/>
-            <p className={ s.search } >Start with searching a GitHub user</p>
+            <div>
+                <img className={ s.image } src={ searchImage } alt='search_image'/>
+                <p className={ s.search } >Start with searching a GitHub user</p>
+            </div>
         </div> 
     )
 }

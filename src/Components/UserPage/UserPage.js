@@ -14,31 +14,29 @@ export const UserPage = () => {
     const [repos, setRepos] = useState('');
     const userId = useParams().userId;
     const amountPerPage = 4;
-    const baseurl = 'https://api.github.com/users/'; 
+    const baseurl = 'https://api.github.com/users/';
+
 
     useEffect(() => {
         const getUserData = async() => {
 
             const data = await request(`${ baseurl }${ userId }`);
 
-            if (!data) {
+            if (data.message) {
                 return <Redirect to={ '/notfound' } />
             }
-
             setUserData(data);
         }
         getUserData();
 
         const getRepos = async() => {
-
             const data = await request(
                 `${ baseurl }${ userId }/repos?page=${ currentPage }&per_page=${ amountPerPage }`
-            );
-
+                );
             setRepos(data);
         }
         getRepos();
-
+        
     }, [amountPerPage, currentPage, userId, request])
 
     if (loading) {
