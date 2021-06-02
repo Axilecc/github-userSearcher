@@ -1,5 +1,5 @@
 .about {
-    margin-left: 90px;
+    text-align: center;
 }
 
 .about a {
@@ -10,19 +10,16 @@
 .about .name {
     font-weight: bold;
     font-size: 20px;
-    text-align: left;
     color: black;
 }
 
 .about .login {
     font-size: 20px;
-    text-align: left;
     color: black;
 }
 
 .about .follow {
     font-size: 16px;
-    text-align: left;
     color: black;
 }
 

@@ -6,8 +6,7 @@ import s from './UserData.module.css';
 export const UserData = ({ followers, userLink, following, 
                            name, login, url }) => {
     return (
-        <div className={ s.container }> 
-
+        <div> 
             <div className={ s.avatar }>
                 <img src={ url } alt='user_avatar'/>
             </div>
