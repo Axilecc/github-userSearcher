@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { Preloader } from '../../Common/Preloader/Preloader';
 import { useHttp } from '../../Hooks/http.hook';
 import { UserData } from './UserData/UserData';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { RepositoriesPage } from './RepositoriesPage/RepositoriesPage';
 import s from './UserPage.module.css';
 
@@ -15,6 +15,7 @@ export const UserPage = () => {
     const userId = useParams().userId;
     const amountPerPage = 4;
     const baseurl = 'https://api.github.com/users/';
+    const history = useHistory();
 
 
     useEffect(() => {
@@ -23,7 +24,7 @@ export const UserPage = () => {
             const data = await request(`${ baseurl }${ userId }`);
 
             if (data.message) {
-                return <Redirect to={ '/notfound' } />
+                history.push('/notfound')
             }
             setUserData(data);
         }
@@ -32,7 +33,7 @@ export const UserPage = () => {
         const getRepos = async() => {
             const data = await request(
                 `${ baseurl }${ userId }/repos?page=${ currentPage }&per_page=${ amountPerPage }`
-                );
+                );   
             setRepos(data);
         }
         getRepos();
