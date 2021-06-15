@@ -22,7 +22,7 @@ export const Paginator = ({ totalItemsCount, currentPage,
 
 
     return (
-        <div>
+        <div className={ s.container }>
             <span>{ firstItem } - { lastItem } of { totalItemsCount } items </span>
 
             { portionNumber > 1 && 

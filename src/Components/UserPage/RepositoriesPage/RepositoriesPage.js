@@ -12,7 +12,7 @@ export const RepositoriesPage = ({ repos, repCount, currentPage,
     }
 
     return (
-        <div>        
+        <div className={ s.container }>        
             <div>
                 <p className={ s.repositories }> Repositories ({ repCount }) </p>
             </div>

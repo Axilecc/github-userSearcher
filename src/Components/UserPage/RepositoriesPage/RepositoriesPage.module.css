@@ -1,4 +1,17 @@
+.container {
+    background-color: #E5E5E5;
+}
+
 .repositories {
     text-align: left;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .repositories {
+        text-align: center;
+    }
+    .container {
+        align-items: center;
+    }
 }

@@ -20,3 +20,9 @@ input {
     padding-left: 40px;
     background-color: #fff;
 }
+
+@media (max-width: 768px) {
+    input {
+        width: 50%;
+    }
+}
